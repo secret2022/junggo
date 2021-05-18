@@ -15,6 +15,7 @@
 
  -->
 
+
 <!doctype html>
 <html>
   <head>
@@ -22,11 +23,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   <!-- 렌더링 확대와 축소  부트 스트랩 모바일 우선 --> 
    	
-  	<link rel="stylesheet"  href="/resources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/resources/css/custom.css">
-  	<script src="/resources/js/jquery.min.js"></script>
-    <script src="/resources/popper.min.js"></script>
-    <script src="/resources/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet"  href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/custom.css">
+  	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
     
 
 <script type="text/javascript">
