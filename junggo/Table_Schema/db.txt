@@ -1,0 +1,46 @@
+21.6.3(수)
+
+
+drop  table member;
+create table member(
+USERID varchar2(20) not null primary key,
+USERPASSWORD varchar2(64) not null ,
+USEREMAIL varchar2(70),
+USEREMAILHash varchar2(64),
+USEREMAILCHECKED number(1) 
+);
+
+drop  table likey;
+create table likey(
+USERID varchar2(20),
+PRODUCTID number ,
+USERIP varchar2(50) 
+);
+
+drop table chat;
+create table chat (
+USERID varchar2(20),
+ROOM varchar2(70) ,
+MSG varchar2(500),
+CHATDATE date
+);
+
+
+drop table product;
+create table product (
+P_ID number ,
+P_USERID varchar2(20) not null primary key,
+P_TITLE varchar2(200) not null,
+P_PRICE number(20),
+P_GROUP varchar2(100) not null,
+P_FILE varchar2(100),
+P_CONTENT varchar2(2000),
+P_DATE date,
+P_FLAG number(1)
+);
+
+drop sequence p_seq;
+create sequence p_seq;
+commit;
+
+
