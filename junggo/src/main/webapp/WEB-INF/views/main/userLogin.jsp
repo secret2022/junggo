@@ -1,16 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-
-
-<!-- JSTL -->
-<%-- <%@ taglib prefix="c"    uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt"  %>
-<%@ taglib prefix="fn"   uri="http://java.sun.com/jsp/jstl/functions" %> --%>
-
 <%@ include file="../include/header.jsp" %> 
-<!-- servlet
 
- -->
  
   <body>
   
@@ -36,16 +26,15 @@
           <li class="nav-item dropdown"> 	              
             <a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown">  회원 관리  </a>
             <div class="dropdown-menu" aria-labelledby="dropdown">             <!-- 드랍 다운 메뉴 -->
-
-<c:choose>
-     <c:when test="${sessionScope.userID == null }">
+		<c:choose>
+     		<c:when test="${sessionScope.userID == null }">
     		  <a class="dropdown-item active" href="./userLogin.jsp">로그인</a>
-              <a class="dropdown-item" href="./userJoin.jsp">회원가입</a>
-	</c:when>
-  	<c:otherwise>
-             <a class="dropdown-item" href="./userLogout.jsp">로그아웃</a>
-	</c:otherwise>
-</c:choose> 
+              <a class="dropdown-item" href="./userJoin.do">회원가입</a>
+			</c:when>
+  			<c:otherwise>
+              <a class="dropdown-item" href="./userLogout.do">로그아웃</a>
+			</c:otherwise>
+		</c:choose> 
             </div>
           </li>
         </ul>

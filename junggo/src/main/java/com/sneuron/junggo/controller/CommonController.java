@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import lombok.extern.log4j.Log4j;
 
@@ -12,6 +14,32 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class CommonController {
 
+	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	public String login() {
+		System.out.println("login");
+		return "userLogin"; 
+		//return "loginQueryAjax";
+	}
+ 
+	@RequestMapping("/userJoin.do")
+	public String userJoin() {
+		System.out.println("userJoin");
+		return "userJoin";
+	}
+	
+	@RequestMapping("/userLogout")
+	public String userLogout() {
+		System.out.println("userLogout");
+		return "userLogout";
+	}
+	
+	@RequestMapping("/loginCheck.do")
+	public String loginCheck() {
+		System.out.println("loginCheck");
+		return "loginCheck";
+	}
+	
+	
 	@GetMapping("/accessError")
 	public void accessDenied(Authentication auth, Model model) {
 

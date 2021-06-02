@@ -4,9 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-//import org.zerock.domain.MemberVO;
-//import org.zerock.mapper.MemberMapper;
-//import org.zerock.security.domain.CustomUser;
+
+import com.sneuron.junggo.VO.MemberVO;
+import com.sneuron.junggo.mapper.MemberMapper;
+import com.sneuron.junggo.security.CustomUser;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
