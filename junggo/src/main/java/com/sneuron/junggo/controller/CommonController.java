@@ -63,7 +63,7 @@ public class CommonController {
 		}
 	}
 
-	@GetMapping("/customLogoutt")
+	@GetMapping("/customLogout")
 	public void logoutGET() {
 
 		log.info("custom logout");
